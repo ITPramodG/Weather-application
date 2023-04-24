@@ -11,6 +11,7 @@ const Temp = () => {
             let url = `https://api.openweathermap.org/data/2.5/weather?q=${searchValue}
            &units=metric&APPID=f8087a9c74fd80bf10a23435f742fdbb`;
             let res = await fetch(url)
+            console.log(res)
             let data = await res.json()
             const { temp, humidity, pressure } = data.main
             const { main } = data.weather[0]
